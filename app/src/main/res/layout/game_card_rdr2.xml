@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="4dp"
+    android:minHeight="100dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/card_border">
+
+        <ImageView
+            android:id="@+id/gameImage_rdr2"
+            android:layout_width="185dp"
+            android:layout_height="84dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rdr2"
+            android:background="@drawable/rounded_image_bg"
+            android:clipToOutline="true"/>
+
+        <TextView
+            android:id="@+id/gameTitle_rdr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/gameImage_rdr2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@id/gameImage_rdr2"
+            android:text="Red Dead Redemption 2"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/favoriteIcon_rdr2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_below="@id/gameTitle_rdr2"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="55dp"
+            android:layout_toStartOf="@+id/gamePrice_rdr2"
+            android:layout_toEndOf="@id/gameImage_rdr2"
+            android:src="@drawable/ic_favorite"
+            app:tint="#7F828B"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/delIcon_rdr2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/gameTitle_rdr2"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/gamePrice_rdr2"
+            android:layout_toEndOf="@id/gameImage_rdr2"
+            android:src="@drawable/ic_del"
+            app:tint="#7F828B"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/gamePrice_rdr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gameImage_rdr2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/game_card_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="59.99€"
+            android:textColor="#00FF66"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

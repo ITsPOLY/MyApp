@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Фиксированный заголовок -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginVertical="25dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Store"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_cart"
+            android:contentDescription="Cart" />
+
+        <ImageView
+            android:id="@+id/favIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_favorite"
+            android:contentDescription="Favorites" />
+
+    </LinearLayout>
+
+    <!-- Прокручиваемая область с карточками -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Карточки игр -->
+            <include
+                android:id="@+id/cardCS2"
+                layout="@layout/game_card_cs2" />
+            <include
+                android:id="@+id/cardINZOI"
+                layout="@layout/game_card_inzoi" />
+            <include
+                android:id="@+id/cardMHW"
+                layout="@layout/game_card_mhw" />
+            <include
+                android:id="@+id/cardPOE2"
+                layout="@layout/game_card_poe2" />
+            <include
+                android:id="@+id/cardACSHADOWS"
+                layout="@layout/game_card_acshadows" />
+            <include
+                android:id="@+id/cardRDR2"
+                layout="@layout/game_card_rdr2" />
+            <include
+                android:id="@+id/cardHASTE"
+                layout="@layout/game_card_haste" />
+            <include
+                android:id="@+id/cardCOD"
+                layout="@layout/game_card_cod" />
+            <include
+                android:id="@+id/cardSOTF"
+                layout="@layout/game_card_sotf" />
+            <include
+                android:id="@+id/cardWARFRAME"
+                layout="@layout/game_card_warframe" />
+            <include
+                android:id="@+id/cardENSHROUDED"
+                layout="@layout/game_card_enshrouded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
